@@ -16,7 +16,7 @@ h3{
 }
 
 #content {
-    border-left:.5rem solid grey;
+    /* border-left:.5rem solid grey; */
 }
 
 /* HEADER */
@@ -118,10 +118,10 @@ h3{
     flex: 2 0 80%;
     border-left: 10px solid grey;
 }
-
+/* 
 .section {
     width:70%
-}
+} */
 
   /* ABOUT ME */
 
@@ -158,20 +158,7 @@ h3{
     font-size: 1.5em;
 }
 
-/* .about-me-content .me-content{
-    flex:1 0 2rem;
-    margin:2rem 2rem;
-    font-size: 2rem;
-} */
-
-
-
 /* WORK */
-/* 
-.work-side {
-    max-width:30%;
-    margin-left:10vw;
-} */
 
  .body .work {
     display:flex;
@@ -202,12 +189,12 @@ h3{
 }
 
 .first {
-    flex:2 0 0;
-    max-width:70vw;
+    flex:2 1 0;
+    width:70vw;
 }
 
 .others {
-    flex: 1 1 0; 
+    flex: 1 0 25vw; 
     max-width:25vw;
 }
 
@@ -241,7 +228,8 @@ h3{
 
  .body .contact {
     display:flex;
-    justify-content: space-around;
+    flex-flow:row wrap;
+    justify-content: space-between; 
     flex-flow:row wrap;
     /* width:60%; */
 }
@@ -250,9 +238,22 @@ h3{
 
 .contact-content {
     display:flex;
+    flex-flow: row wrap;
     gap: 20px;
     padding:.5rem;
     list-style-type: none;
     font-size: 1.5rem;
 }
  
+@media screen and (max-width:1160px){
+    .header{
+        flex-direction: row;
+    }
+    .nav {
+        display:flex;
+        flex-direction: row;
+        width:100vw;
+        height:20vh;
+        justify-content: center;
+    }
+}
